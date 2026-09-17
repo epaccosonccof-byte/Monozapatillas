@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MONO | Zapatillas Monocromáticas</title>
 
     <style>
+
+        /* ================= GENERAL ================= */
 
         * {
             margin: 0;
@@ -24,15 +28,18 @@
             color: #171717;
         }
 
+
         /* ================= HEADER ================= */
 
         header {
             background: #ffffff;
             min-height: 75px;
             padding: 0 8%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             border-bottom: 1px solid #ddd;
 
             position: sticky;
@@ -47,11 +54,12 @@
         }
 
         .logo span {
+            display: block;
+            margin-top: 2px;
+
             font-size: 11px;
             letter-spacing: 2px;
-            display: block;
             color: #777;
-            margin-top: 2px;
         }
 
         nav {
@@ -76,11 +84,13 @@
         #inicio {
             min-height: 620px;
             padding: 70px 8%;
+
             background: #e5e5e5;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 50px;
         }
 
@@ -90,21 +100,25 @@
 
         .hero small {
             display: block;
+
             font-size: 14px;
             letter-spacing: 3px;
             color: #666;
+
             margin-bottom: 15px;
         }
 
         .hero h1 {
             font-size: 80px;
             letter-spacing: 12px;
+
             margin-bottom: 10px;
         }
 
         .hero h2 {
             font-size: 32px;
             font-weight: normal;
+
             margin-bottom: 20px;
         }
 
@@ -112,16 +126,21 @@
             font-size: 18px;
             line-height: 1.7;
             color: #555;
+
             margin-bottom: 30px;
         }
 
         .boton {
             display: inline-block;
+
             background: #171717;
             color: white;
+
             padding: 14px 28px;
+
             text-decoration: none;
             border-radius: 4px;
+
             transition: 0.3s;
         }
 
@@ -133,7 +152,9 @@
         .hero-imagen {
             width: 420px;
             height: 420px;
+
             background: #171717;
+
             border-radius: 50%;
 
             display: flex;
@@ -141,7 +162,8 @@
             justify-content: center;
 
             font-size: 130px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
 
@@ -149,7 +171,9 @@
 
         #coleccion {
             padding: 90px 8%;
+
             text-align: center;
+
             background: white;
         }
 
@@ -166,15 +190,20 @@
         .productos {
             display: flex;
             justify-content: center;
+
             gap: 25px;
             flex-wrap: wrap;
         }
 
         .producto {
             width: 260px;
+
             background: #f5f5f5;
+
             padding: 15px;
+
             border-radius: 10px;
+
             text-align: left;
 
             transition: 0.3s;
@@ -182,7 +211,9 @@
 
         .producto:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.12);
         }
 
         .producto-img {
@@ -193,9 +224,12 @@
             justify-content: center;
 
             font-size: 80px;
+
             border-radius: 7px;
+
             margin-bottom: 20px;
         }
+
 
         /* ================= COLORES ================= */
 
@@ -215,6 +249,9 @@
             background: #496a87;
         }
 
+
+        /* ================= PRODUCTOS ================= */
+
         .producto h3 {
             font-size: 20px;
             margin-bottom: 8px;
@@ -222,14 +259,17 @@
 
         .producto p {
             color: #666;
+
             font-size: 14px;
             line-height: 1.5;
+
             margin-bottom: 15px;
         }
 
         .precio {
             font-weight: bold;
             font-size: 18px;
+
             margin-bottom: 15px;
         }
 
@@ -238,36 +278,50 @@
 
         #nosotros {
             padding: 90px 8%;
+
             background: #171717;
             color: white;
+
             text-align: center;
         }
 
         #nosotros h2 {
             font-size: 40px;
+
             margin-bottom: 25px;
         }
 
-        #nosotros p {
+        #nosotros > p {
             max-width: 750px;
+
             margin: auto;
+
             line-height: 1.8;
+
             color: #ccc;
+
             font-size: 17px;
         }
 
         .valores {
             display: flex;
+
             justify-content: center;
+
             gap: 25px;
+
             margin-top: 45px;
+
             flex-wrap: wrap;
         }
 
         .valor {
             width: 220px;
+
             padding: 25px;
+
             border: 1px solid #444;
+
             border-radius: 8px;
         }
 
@@ -285,17 +339,21 @@
 
         #contacto {
             padding: 90px 8%;
+
             text-align: center;
+
             background: white;
         }
 
         #contacto h2 {
             font-size: 40px;
+
             margin-bottom: 25px;
         }
 
         .contacto {
             line-height: 2.2;
+
             color: #555;
         }
 
@@ -304,14 +362,78 @@
 
         footer {
             background: #111;
+
             color: white;
-            text-align: center;
-            padding: 25px;
+
+            padding: 35px 8% 25px;
         }
 
-        footer p {
+        .footer-contenido {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .footer-marca h3 {
+            font-size: 24px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 8px;
+        }
+
+        .footer-marca p {
             font-size: 14px;
+
             color: #aaa;
+        }
+
+        .footer-estudiantes {
+            text-align: right;
+        }
+
+        .footer-estudiantes h4 {
+            font-size: 15px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-estudiantes ul {
+            list-style: none;
+
+            padding: 0;
+        }
+
+        .footer-estudiantes li {
+            color: #aaa;
+
+            font-size: 14px;
+
+            margin: 5px 0;
+        }
+
+        .footer-linea {
+            max-width: 1100px;
+
+            margin: 25px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #333;
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 13px;
         }
 
 
@@ -319,26 +441,38 @@
 
         @media (max-width: 800px) {
 
+            /* HEADER */
+
             header {
                 padding: 20px;
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav {
                 gap: 18px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
+
+            /* INICIO */
+
             #inicio {
                 text-align: center;
+
                 justify-content: center;
+
                 flex-direction: column;
             }
 
             .hero h1 {
                 font-size: 55px;
+
                 letter-spacing: 8px;
             }
 
@@ -349,18 +483,40 @@
             .hero-imagen {
                 width: 280px;
                 height: 280px;
+
                 font-size: 90px;
             }
 
+
+            /* PRODUCTOS */
+
             .producto {
                 width: 100%;
+
                 max-width: 320px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+                text-align: center;
+            }
+
+            .footer-contenido {
+                flex-direction: column;
+            }
+
+            .footer-estudiantes {
+                text-align: center;
             }
 
         }
 
     </style>
+
 </head>
+
 
 <body>
 
@@ -370,15 +526,24 @@
     <header>
 
         <div class="logo">
+
             MONO
+
             <span>MONOCROMÁTICO</span>
+
         </div>
 
+
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#coleccion">Colección</a>
+
             <a href="#nosotros">Nosotros</a>
+
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
@@ -407,8 +572,11 @@
 
         </div>
 
+
         <div class="hero-imagen">
+
             👟
+
         </div>
 
     </section>
@@ -424,8 +592,11 @@
             Un modelo. Un color. Sin complicaciones.
         </p>
 
+
         <div class="productos">
 
+
+            <!-- ZAPATILLA NEGRA -->
 
             <article class="producto">
 
@@ -451,6 +622,8 @@
             </article>
 
 
+            <!-- ZAPATILLA BLANCA -->
+
             <article class="producto">
 
                 <div class="producto-img blanco">
@@ -474,6 +647,8 @@
 
             </article>
 
+
+            <!-- ZAPATILLA BEIGE -->
 
             <article class="producto">
 
@@ -499,6 +674,8 @@
             </article>
 
 
+            <!-- ZAPATILLA AZUL -->
+
             <article class="producto">
 
                 <div class="producto-img azul">
@@ -522,6 +699,7 @@
 
             </article>
 
+
         </div>
 
     </section>
@@ -540,28 +718,42 @@
             pensado para combinar fácilmente con diferentes estilos.
         </p>
 
+
         <div class="valores">
 
+
             <div class="valor">
+
                 <h3>Minimalismo</h3>
+
                 <p>
                     Diseños simples y sin elementos innecesarios.
                 </p>
+
             </div>
 
+
             <div class="valor">
+
                 <h3>Comodidad</h3>
+
                 <p>
                     Pensadas para acompañarte durante todo el día.
                 </p>
+
             </div>
 
+
             <div class="valor">
+
                 <h3>Identidad</h3>
+
                 <p>
                     Un solo color para expresar tu propio estilo.
                 </p>
+
             </div>
+
 
         </div>
 
@@ -574,10 +766,13 @@
 
         <h2>Contacto</h2>
 
+
         <div class="contacto">
 
             <p>📍 Arequipa, Perú</p>
+
             <p>📞 +51 999 999 999</p>
+
             <p>✉️ contacto@mono.com</p>
 
         </div>
@@ -589,12 +784,59 @@
 
     <footer>
 
-        <p>
-            © 2026 MONO — Zapatillas Monocromáticas
-        </p>
+
+        <div class="footer-contenido">
+
+
+            <!-- INFORMACIÓN DE MONO -->
+
+            <div class="footer-marca">
+
+                <h3>MONO</h3>
+
+                <p>
+                    Zapatillas monocromáticas
+                </p>
+
+            </div>
+
+
+            <!-- ESTUDIANTES -->
+
+            <div class="footer-estudiantes">
+
+                <h4>Estudiantes</h4>
+
+                <ul>
+
+                    <li>
+                        Efraín Paccosoncco
+                    </li>
+
+                    <li>
+                        Fernando Mansilla
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-linea">
+
+            © 2026 MONO — Todos los derechos reservados
+
+        </div>
+
 
     </footer>
 
 
 </body>
+
 </html>
