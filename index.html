@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MONO | Zapatillas Monocromáticas</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #171717;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #ffffff;
+            height: 75px;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #171717;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= INICIO ================= */
+
+        #inicio {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: #e5e5e5;
+        }
+
+        .hero {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #171717;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .boton:hover {
+            background: #444;
+        }
+
+
+        /* ================= COLECCIÓN ================= */
+
+        #coleccion {
+            padding: 80px 8%;
+            text-align: center;
+            background: white;
+        }
+
+        #coleccion h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            color: #666;
+            margin-bottom: 45px;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            width: 260px;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .producto-img {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Cada producto tiene un solo color */
+
+        .negro {
+            background: #1a1a1a;
+        }
+
+        .blanco {
+            background: #eeeeee;
+        }
+
+        .beige {
+            background: #d6c3a5;
+        }
+
+        .azul {
+            background: #496a87;
+        }
+
+        .producto h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .producto p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .precio {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+
+        /* ================= NOSOTROS ================= */
+
+        #nosotros {
+            padding: 80px 8%;
+            background: #171717;
+            color: white;
+            text-align: center;
+        }
+
+        #nosotros h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        #nosotros p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+
+        /* ================= CONTACTO ================= */
+
+        #contacto {
+            padding: 80px 8%;
+            text-align: center;
+            background: white;
+        }
+
+        #contacto h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .contacto {
+            line-height: 2;
+            color: #555;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #inicio {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .producto {
+                width: 100%;
+                max-width: 320px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            MONO
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#coleccion">Colección</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= INICIO ================= -->
+
+    <section id="inicio">
+
+        <div class="hero">
+
+            <h1>MONO</h1>
+
+            <h2>Un color. Un estilo.</h2>
+
+            <p>
+                Zapatillas monocromáticas diseñadas para quienes
+                prefieren un estilo limpio, simple y moderno.
+            </p>
+
+            <a href="#coleccion" class="boton">
+                Ver colección
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLECCIÓN ================= -->
+
+    <section id="coleccion">
+
+        <h2>Nuestra colección</h2>
+
+        <p class="descripcion">
+            Un modelo. Un color. Sin complicaciones.
+        </p>
+
+
+        <div class="productos">
+
+
+            <!-- ZAPATILLA NEGRA -->
+
+            <article class="producto">
+
+                <div class="producto-img negro">
+                    👟
+                </div>
+
+                <h3>MONO Black</h3>
+
+                <p>
+                    Diseño completamente negro para un estilo
+                    elegante y urbano.
+                </p>
+
+                <div class="precio">
+                    S/ 159.90
+                </div>
+
+                <a href="#contacto" class="boton">
+                    Comprar
+                </a>
+
+            </article>
+
+
+            <!-- ZAPATILLA BLANCA -->
+
+            <article class="producto">
+
+                <div class="producto-img blanco">
+                    👟
+                </div>
+
+                <h3>MONO White</h3>
+
+                <p>
+                    Diseño completamente blanco,
+                    limpio y minimalista.
+                </p>
+
+                <div class="precio">
+                    S/ 159.90
+                </div>
+
+                <a href="#contacto" class="boton">
+                    Comprar
+                </a>
+
+            </article>
+
+
+            <!-- ZAPATILLA BEIGE -->
+
+            <article class="producto">
+
+                <div class="producto-img beige">
+                    👟
+                </div>
+
+                <h3>MONO Beige</h3>
+
+                <p>
+                    Tonos beige para un estilo discreto
+                    y versátil.
+                </p>
+
+                <div class="precio">
+                    S/ 169.90
+                </div>
+
+                <a href="#contacto" class="boton">
+                    Comprar
+                </a>
+
+            </article>
+
+
+            <!-- ZAPATILLA AZUL -->
+
+            <article class="producto">
+
+                <div class="producto-img azul">
+                    👟
+                </div>
+
+                <h3>MONO Blue</h3>
+
+                <p>
+                    Una tonalidad azul uniforme
+                    con un diseño moderno.
+                </p>
+
+                <div class="precio">
+                    S/ 169.90
+                </div>
+
+                <a href="#contacto" class="boton">
+                    Comprar
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOSOTROS ================= -->
+
+    <section id="nosotros">
+
+        <h2>Sobre MONO</h2>
+
+        <p>
+            MONO nace con una idea sencilla: crear zapatillas
+            que no necesiten demasiados detalles para destacar.
+            Cada modelo utiliza un solo color y un diseño limpio,
+            pensado para combinar fácilmente con diferentes estilos.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+
+    <section id="contacto">
+
+        <h2>Contacto</h2>
+
+        <div class="contacto">
+
+            <p>📍 Arequipa, Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+            <p>✉️ contacto@mono.com</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 MONO — Zapatillas Monocromáticas
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
