@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,212 +26,391 @@
             color: #171717;
         }
 
+
         /* ================= HEADER ================= */
 
         header {
-            background: #ffffff;
+
+            background: rgba(255,255,255,0.95);
+
             min-height: 75px;
+
             padding: 0 8%;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             border-bottom: 1px solid #ddd;
 
             position: sticky;
+
             top: 0;
+
             z-index: 100;
+
+            backdrop-filter: blur(10px);
         }
 
+
         .logo {
+
             font-size: 28px;
+
             font-weight: bold;
+
             letter-spacing: 6px;
         }
 
+
         .logo span {
-            font-size: 11px;
-            letter-spacing: 2px;
+
             display: block;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
             color: #777;
-            margin-top: 2px;
+
+            margin-top: 3px;
         }
 
+
         nav {
+
             display: flex;
+
             gap: 30px;
         }
 
+
         nav a {
+
             color: #171717;
+
             text-decoration: none;
+
             font-size: 15px;
+
+            position: relative;
+
             transition: 0.3s;
         }
 
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #171717;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+        }
+
+
         nav a:hover {
-            color: #777;
+
+            color: #666;
         }
 
 
         /* ================= INICIO ================= */
 
         #inicio {
-            min-height: 620px;
+
+            min-height: 650px;
+
             padding: 70px 8%;
-            background: #e5e5e5;
+
+            background: #e8e8e8;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
-            gap: 50px;
+
+            gap: 60px;
         }
 
+
         .hero {
+
             max-width: 600px;
         }
 
+
         .hero small {
+
             display: block;
-            font-size: 14px;
-            letter-spacing: 3px;
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+
             color: #666;
-            margin-bottom: 15px;
-        }
 
-        .hero h1 {
-            font-size: 80px;
-            letter-spacing: 12px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            font-weight: normal;
             margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 30px;
+
+        .hero h1 {
+
+            font-size: 90px;
+
+            letter-spacing: 18px;
+
+            line-height: 1;
+
+            margin-bottom: 15px;
         }
 
+
+        .hero h2 {
+
+            font-size: 30px;
+
+            font-weight: normal;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero p {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #555;
+
+            margin-bottom: 30px;
+
+            max-width: 520px;
+        }
+
+
         .boton {
+
             display: inline-block;
+
             background: #171717;
+
             color: white;
+
             padding: 14px 28px;
+
             text-decoration: none;
+
             border-radius: 4px;
+
+            font-size: 14px;
+
             transition: 0.3s;
         }
 
+
         .boton:hover {
+
             background: #444;
-            transform: translateY(-2px);
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
 
+
+        /* ================= IMAGEN PRINCIPAL ================= */
+
         .hero-imagen {
-            width: 420px;
-            height: 420px;
-            background: #171717;
+
+            width: 440px;
+
+            height: 440px;
+
             border-radius: 50%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
 
-            font-size: 130px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            background: #ddd;
+
+            box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+
+            flex-shrink: 0;
+        }
+
+
+        .hero-imagen img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+
+        .hero-imagen:hover img {
+
+            transform: scale(1.05);
         }
 
 
         /* ================= COLECCIÓN ================= */
 
         #coleccion {
-            padding: 90px 8%;
-            text-align: center;
+
+            padding: 100px 8%;
+
             background: white;
+
+            text-align: center;
         }
+
 
         #coleccion h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
         }
+
 
         .descripcion {
+
             color: #666;
-            margin-bottom: 50px;
+
+            margin-bottom: 55px;
+
+            font-size: 16px;
         }
+
 
         .productos {
-            display: flex;
-            justify-content: center;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 25px;
-            flex-wrap: wrap;
+
+            max-width: 1200px;
+
+            margin: auto;
         }
+
+
+        /* ================= PRODUCTO ================= */
 
         .producto {
-            width: 260px;
+
             background: #f5f5f5;
+
             padding: 15px;
-            border-radius: 10px;
+
+            border-radius: 12px;
+
             text-align: left;
 
+            overflow: hidden;
+
             transition: 0.3s;
+
+            border: 1px solid #eee;
         }
+
 
         .producto:hover {
+
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.12);
         }
+
 
         .producto-img {
-            height: 220px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 250px;
 
-            font-size: 80px;
-            border-radius: 7px;
+            border-radius: 8px;
+
+            overflow: hidden;
+
             margin-bottom: 20px;
+
+            background: #eee;
         }
 
-        /* ================= COLORES ================= */
 
-        .negro {
-            background: #1a1a1a;
+        .producto-img img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
         }
 
-        .blanco {
-            background: #eeeeee;
+
+        .producto:hover .producto-img img {
+
+            transform: scale(1.06);
         }
 
-        .beige {
-            background: #d6c3a5;
-        }
-
-        .azul {
-            background: #496a87;
-        }
 
         .producto h3 {
+
             font-size: 20px;
+
             margin-bottom: 8px;
         }
 
+
         .producto p {
+
             color: #666;
+
             font-size: 14px;
+
             line-height: 1.5;
-            margin-bottom: 15px;
+
+            min-height: 65px;
+
+            margin-bottom: 12px;
         }
 
+
         .precio {
+
+            font-size: 19px;
+
             font-weight: bold;
-            font-size: 18px;
+
             margin-bottom: 15px;
         }
 
@@ -237,130 +418,292 @@
         /* ================= NOSOTROS ================= */
 
         #nosotros {
-            padding: 90px 8%;
+
+            padding: 100px 8%;
+
             background: #171717;
+
             color: white;
+
             text-align: center;
         }
 
+
         #nosotros h2 {
-            font-size: 40px;
+
+            font-size: 42px;
+
             margin-bottom: 25px;
         }
 
-        #nosotros p {
+
+        #nosotros > p {
+
             max-width: 750px;
+
             margin: auto;
+
             line-height: 1.8;
+
             color: #ccc;
+
             font-size: 17px;
         }
 
+
         .valores {
-            display: flex;
-            justify-content: center;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
-            margin-top: 45px;
-            flex-wrap: wrap;
+
+            max-width: 850px;
+
+            margin: 50px auto 0;
         }
+
 
         .valor {
-            width: 220px;
-            padding: 25px;
+
+            padding: 30px;
+
             border: 1px solid #444;
-            border-radius: 8px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
         }
+
+
+        .valor:hover {
+
+            border-color: #888;
+
+            transform: translateY(-5px);
+        }
+
 
         .valor h3 {
-            margin-bottom: 10px;
+
+            margin-bottom: 12px;
+
+            font-size: 20px;
         }
 
+
         .valor p {
-            font-size: 14px !important;
-            color: #aaa !important;
+
+            color: #aaa;
+
+            font-size: 14px;
+
+            line-height: 1.6;
         }
 
 
         /* ================= CONTACTO ================= */
 
         #contacto {
-            padding: 90px 8%;
-            text-align: center;
+
+            padding: 100px 8%;
+
             background: white;
+
+            text-align: center;
         }
+
 
         #contacto h2 {
-            font-size: 40px;
-            margin-bottom: 25px;
+
+            font-size: 42px;
+
+            margin-bottom: 30px;
         }
 
+
         .contacto {
-            line-height: 2.2;
+
+            line-height: 2.4;
+
             color: #555;
+
+            font-size: 17px;
+        }
+
+
+        .contacto p {
+
+            margin-bottom: 5px;
         }
 
 
         /* ================= FOOTER ================= */
 
         footer {
+
             background: #111;
+
             color: white;
+
+            padding: 35px 20px;
+
             text-align: center;
-            padding: 25px;
         }
 
-        footer p {
-            font-size: 14px;
+
+        footer > p {
+
             color: #aaa;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        footer h4 {
+
+            font-size: 15px;
+
+            margin-bottom: 10px;
+
+            letter-spacing: 2px;
+        }
+
+
+        footer ul {
+
+            list-style: none;
+
+            color: #888;
+
+            font-size: 13px;
+
+            line-height: 1.8;
         }
 
 
         /* ================= RESPONSIVE ================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
 
-            header {
-                padding: 20px;
-                flex-direction: column;
-                gap: 15px;
+            .productos {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            nav {
-                gap: 18px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
             #inicio {
-                text-align: center;
-                justify-content: center;
-                flex-direction: column;
+
+                padding: 70px 5%;
             }
+
+
+            .hero-imagen {
+
+                width: 350px;
+
+                height: 350px;
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            header {
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+
+            nav {
+
+                gap: 18px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            #inicio {
+
+                text-align: center;
+
+                flex-direction: column;
+
+                padding: 70px 20px;
+            }
+
 
             .hero h1 {
-                font-size: 55px;
-                letter-spacing: 8px;
+
+                font-size: 60px;
+
+                letter-spacing: 10px;
             }
 
+
             .hero h2 {
+
                 font-size: 25px;
             }
 
-            .hero-imagen {
-                width: 280px;
-                height: 280px;
-                font-size: 90px;
+
+            .hero p {
+
+                margin-left: auto;
+
+                margin-right: auto;
             }
 
+
+            .hero-imagen {
+
+                width: 300px;
+
+                height: 300px;
+            }
+
+
+            .productos {
+
+                grid-template-columns: 1fr;
+            }
+
+
             .producto {
+
+                max-width: 400px;
+
                 width: 100%;
-                max-width: 320px;
+
+                margin: auto;
+            }
+
+
+            .valores {
+
+                grid-template-columns: 1fr;
+
+                max-width: 400px;
             }
 
         }
 
     </style>
+
 </head>
+
 
 <body>
 
@@ -370,18 +713,28 @@
     <header>
 
         <div class="logo">
+
             MONO
+
             <span>MONOCROMÁTICO</span>
+
         </div>
 
+
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#coleccion">Colección</a>
+
             <a href="#nosotros">Nosotros</a>
+
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
+
 
 
     <!-- ================= INICIO ================= -->
@@ -397,21 +750,33 @@
             <h2>Un color. Un estilo.</h2>
 
             <p>
-                Zapatillas monocromáticas diseñadas para quienes
-                prefieren un estilo limpio, simple y moderno.
+
+                Zapatillas monocromáticas diseñadas para
+                quienes prefieren un estilo limpio,
+                simple y moderno.
+
             </p>
 
             <a href="#coleccion" class="boton">
+
                 Ver colección
+
             </a>
 
         </div>
 
+
         <div class="hero-imagen">
-            👟
+
+            <img
+                src="https://www.usereise.com.br/cdn/shop/files/Tenis_Casual_All_Black_RS6_Principal_800x.jpg?v=1770128829"
+                alt="Zapatilla MONO negra"
+            >
+
         </div>
 
     </section>
+
 
 
     <!-- ================= COLECCIÓN ================= -->
@@ -421,110 +786,182 @@
         <h2>Nuestra colección</h2>
 
         <p class="descripcion">
+
             Un modelo. Un color. Sin complicaciones.
+
         </p>
+
 
         <div class="productos">
 
 
+            <!-- NEGRO -->
+
             <article class="producto">
 
-                <div class="producto-img negro">
-                    👟
+                <div class="producto-img">
+
+                    <img
+                        src="https://www.usereise.com.br/cdn/shop/files/Tenis_Casual_All_Black_RS6_Principal_800x.jpg?v=1770128829"
+                        alt="MONO Black"
+                    >
+
                 </div>
+
 
                 <h3>MONO Black</h3>
 
                 <p>
-                    Diseño completamente negro para un estilo
-                    elegante y urbano.
+
+                    Diseño completamente negro
+                    para un estilo elegante y urbano.
+
                 </p>
 
+
                 <div class="precio">
+
                     S/ 159.90
+
                 </div>
 
+
                 <a href="#contacto" class="boton">
+
                     Comprar
+
                 </a>
 
             </article>
 
 
+
+            <!-- BLANCO -->
+
             <article class="producto">
 
-                <div class="producto-img blanco">
-                    👟
+                <div class="producto-img">
+
+                    <img
+                        src="https://www.platypusshoes.com.au/media/catalog/product/5/0/50cfa0014216_wht_04.jpg?auto=webp&fit=cover&format=pjpg&quality=85&width=100%25"
+                        alt="MONO White"
+                    >
+
                 </div>
+
 
                 <h3>MONO White</h3>
 
                 <p>
+
                     Diseño completamente blanco,
                     limpio y minimalista.
+
                 </p>
 
+
                 <div class="precio">
+
                     S/ 159.90
+
                 </div>
 
+
                 <a href="#contacto" class="boton">
+
                     Comprar
+
                 </a>
 
             </article>
 
 
+
+            <!-- BEIGE -->
+
             <article class="producto">
 
-                <div class="producto-img beige">
-                    👟
+                <div class="producto-img">
+
+                    <img
+                        src="https://www.lummi.ai/photo/minimalist-beige-sneakers-mcxeb"
+                        alt="MONO Beige"
+                    >
+
                 </div>
+
 
                 <h3>MONO Beige</h3>
 
                 <p>
-                    Tonos beige para un estilo discreto
-                    y versátil.
+
+                    Tonos beige para un estilo
+                    discreto y versátil.
+
                 </p>
 
+
                 <div class="precio">
+
                     S/ 169.90
+
                 </div>
 
+
                 <a href="#contacto" class="boton">
+
                     Comprar
+
                 </a>
 
             </article>
 
 
+
+            <!-- AZUL -->
+
             <article class="producto">
 
-                <div class="producto-img azul">
-                    👟
+                <div class="producto-img">
+
+                    <img
+                        src="https://uniformstandard.com/cdn/shop/products/MensSeries1TripleDenimPS4.jpg?v=1754329399&width=1400"
+                        alt="MONO Blue"
+                    >
+
                 </div>
+
 
                 <h3>MONO Blue</h3>
 
                 <p>
+
                     Una tonalidad azul uniforme
                     con un diseño moderno.
+
                 </p>
 
+
                 <div class="precio">
+
                     S/ 169.90
+
                 </div>
 
+
                 <a href="#contacto" class="boton">
+
                     Comprar
+
                 </a>
 
             </article>
 
+
         </div>
 
     </section>
+
 
 
     <!-- ================= NOSOTROS ================= -->
@@ -533,39 +970,69 @@
 
         <h2>Sobre MONO</h2>
 
+
         <p>
-            MONO nace con una idea sencilla: crear zapatillas
-            que no necesiten demasiados detalles para destacar.
-            Cada modelo utiliza un solo color y un diseño limpio,
-            pensado para combinar fácilmente con diferentes estilos.
+
+            MONO nace con una idea sencilla:
+            crear zapatillas que no necesiten
+            demasiados detalles para destacar.
+
+            Cada modelo utiliza un solo color
+            y un diseño limpio, pensado para
+            combinar fácilmente con diferentes estilos.
+
         </p>
+
 
         <div class="valores">
 
+
             <div class="valor">
+
                 <h3>Minimalismo</h3>
+
                 <p>
-                    Diseños simples y sin elementos innecesarios.
+
+                    Diseños simples y sin
+                    elementos innecesarios.
+
                 </p>
+
             </div>
 
+
             <div class="valor">
+
                 <h3>Comodidad</h3>
+
                 <p>
-                    Pensadas para acompañarte durante todo el día.
+
+                    Pensadas para acompañarte
+                    durante todo el día.
+
                 </p>
+
             </div>
 
+
             <div class="valor">
+
                 <h3>Identidad</h3>
+
                 <p>
-                    Un solo color para expresar tu propio estilo.
+
+                    Un solo color para expresar
+                    tu propio estilo.
+
                 </p>
+
             </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- ================= CONTACTO ================= -->
@@ -574,10 +1041,13 @@
 
         <h2>Contacto</h2>
 
+
         <div class="contacto">
 
             <p>📍 Arequipa, Perú</p>
+
             <p>📞 +51 999 999 999</p>
+
             <p>✉️ contacto@mono.com</p>
 
         </div>
@@ -585,29 +1055,36 @@
     </section>
 
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
+
             © 2026 MONO — Zapatillas Monocromáticas
+
         </p>
-                <h4>Estudiantes</h4>
 
-                <ul>
 
-                    <li>
-                        Paccosoncco Flores Efrain Isaac
-                    </li>
+        <h4>ESTUDIANTES</h4>
 
-                    <li>
-                        Vilca Ruelas Hector Grambel
-                    </li>
 
-                </ul>
+        <ul>
+
+            <li>
+                Paccosoncco Flores Efrain Isaac
+            </li>
+
+            <li>
+                Vilca Ruelas Hector Grambel
+            </li>
+
+        </ul>
 
     </footer>
 
 
 </body>
+
 </html>
